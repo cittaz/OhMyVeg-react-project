@@ -14,6 +14,10 @@ body {
   width: 0px;
 }
 
+#logo-img {
+  width: 250px;
+}
+
 .right-arrow,
 .left-arrow {
   cursor: pointer;
@@ -55,12 +59,12 @@ body {
 
 .hero-banner-img {
   position: absolute;
-  right: 40px;
+  right: 34px;
   top: 0px;
-  width: 700px;
   height: 900px;
   margin-top: -330px;
-
+  border-radius: 10px;
+  border-bottom-left-radius: 100px;
 }
 
 .exercise-card {
@@ -137,6 +141,12 @@ body {
 
 }
 
+@media screen and (max-width:500px) {
+  #logo-img {
+    width: 170px;
+  }
+
+}
 @media screen and (max-width:400px) {
   .exercise-card {
     width: 280px;
