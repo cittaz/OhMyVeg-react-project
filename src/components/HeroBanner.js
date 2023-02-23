@@ -28,7 +28,7 @@ const HeroBanner = () => {
         Discover Delicious Vegan Eats for Every Meal
       </Typography>
       <Button variant='contained'
-      color='success' href='#recipes'>Explore Recipes</Button>
+      color='success' sx={{padding: '10px'}} href='#recipes'>Explore Recipes</Button>
       <Typography fontWeight={600} 
       color='#38b54a'
       sx={{

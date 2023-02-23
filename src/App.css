@@ -1,6 +1,6 @@
 body {
   font-family: 'Josefin Sans';
-  background-color: #FFFAFB;
+  background-color: #FFFFFF;
 }
 
 * {
@@ -53,8 +53,8 @@ body {
 }
 
 .detail-image {
-  width: 729px;
-  height: 742px;
+  width: 600px;
+  /* height: 742px; */
 }
 
 .hero-banner-img {
@@ -67,11 +67,13 @@ body {
   border-bottom-left-radius: 100px;
 }
 
-.exercise-card {
-  width: 400px;
-  height: 445px;
+.recipe-card {
+  width: 360px;
+  height: 400px;
   background: #fff;
-  border-top: 4px solid #FF2625;
+  border-top: 4px solid #38b54a;
+  border-top-left-radius: 17px;
+  border-top-right-radius: 17px;
   border-bottom-left-radius: 20px;
   text-decoration: none;
   display: flex;
@@ -82,32 +84,40 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
-.exercise-card img {
-  height: 326px;
+.recipe-card img {
+  border-radius: 15px;
+  margin-bottom: 14px;
+  /* height: 326px; */
 }
 
-.bodyPart-card {
+.randomRecipe-card {
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
 }
 
-.exercise-card:hover,
-.bodyPart-card:hover {
+.randomRecipe-card:hover {
   transform: scale(1.1, 1.1);
+}
+.recipe-card:hover {
+  transform: scale(1.06, 1.06);
 }
 
 .search-btn:hover {
-  color: #FF2625 !important;
-  border: 1px solid #FF2625 !important;
+  color: #38b54a !important;
+  border: 1px solid #38b54a !important;
 }
 
-.exercise-video {
+.recipe-video {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 387px;
   height: 381px;
   text-decoration: none;
+}
+
+.icons {
+  width: 68px;
 }
 
 @media screen and (max-width:1200px) {
@@ -130,11 +140,11 @@ body {
     display: none;
   }
 
-  .exercise-card {
+  .recipe-card {
     width: 320px;
   }
 
-  .exercise-video {
+  .recipe-video {
     width: 320px;
     height: 300px;
   }
@@ -148,7 +158,7 @@ body {
 
 }
 @media screen and (max-width:400px) {
-  .exercise-card {
+  .recipe-card {
     width: 280px;
   }
 }
