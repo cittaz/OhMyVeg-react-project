@@ -7,13 +7,13 @@ const RecipeCard = ({ recipe }) => {
     <Link className='recipe-card' to={`/recipe/${recipe.id}`}>
       <img src={recipe.image} alt={recipe.title} loading='lazy' />
       <Stack direction='row'>
-        {recipe.glutenFree && <Button sx={{ ml: '21px', color: '#fff', background: 'red',
+        {recipe.glutenFree && <Button className='recipeCard--button' sx={{ ml: '21px', color: '#fff', background: 'red',
           fontSize: '14px', borderRadius: '20px', textTransform:
           'capitalize'}}
         >
           Gluten-free
         </Button>}
-        {recipe.cuisines[0] && <Button sx={{ ml: '21px', color: '#fff', background: 'green',
+        {recipe.cuisines[0] && <Button className='recipeCard--button' sx={{ ml: '21px', color: '#fff', background: 'green',
           fontSize: '14px', borderRadius: '20px', textTransform:
           'capitalize'}}
         >

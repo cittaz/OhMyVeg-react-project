@@ -43,7 +43,7 @@ const SearchRecipes = ({ setRecipes, setIsLoading, isLoading }) => {
 
   async function handleSearch() {
     if(search) {
-      const recipesData = await fetchData(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${search}&diet=vegan&type=maincourse&addRecipeInformation=true&sort=popularity&offset=0&number=2`, recipesOptions);
+      const recipesData = await fetchData(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${search}&diet=vegan&type=maincourse&addRecipeInformation=true&sort=popularity&offset=0&number=8`, recipesOptions);
       try {
         setIsLoading(true);
         let newRecipesData;
@@ -60,11 +60,14 @@ const SearchRecipes = ({ setRecipes, setIsLoading, isLoading }) => {
       } finally {
         setIsLoading(false)
       }
-
-      };
-
-      
+      };  
     }
+
+    const handleKeypress = e => {
+      if (e.keyCode === 13) {
+        handleSearch();
+      }
+    };
 
 
   return (
@@ -80,6 +83,7 @@ const SearchRecipes = ({ setRecipes, setIsLoading, isLoading }) => {
       </Typography>
       <Box position='relative' mb='72px'>
         <TextField 
+        id='recipes'
         sx={{
           input: { fontWeight: '700', border: 'none', borderRadius: '4px' },
           width: { lg: '800px', xs:'350px' },
@@ -88,11 +92,12 @@ const SearchRecipes = ({ setRecipes, setIsLoading, isLoading }) => {
         }}
           heigth='76px'
           value={search}
-          onChange={e => setSearch(e.target.value.toLowerCase())}  
+          onChange={e => setSearch(e.target.value.toLowerCase())}
+          onKeyDown={handleKeypress}  
           placeholder='Search Recipes'
           type='text'
         />
-        <Button className='search-btn'
+        <Button className='search-btn' type='submit'
         sx={{
           bgcolor: '#38b54a',
           color: '#fff',

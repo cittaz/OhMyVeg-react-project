@@ -26,11 +26,15 @@ const Detail = ({ recipeDetail }) => {
     ))
   }
 
-  let newInstruction;
-  if (analyzedInstructions) {
-    newInstruction = analyzedInstructions[0].steps.map(elem => (
-          <Typography key={elem.number} variant='h6' fontSize='18px'><strong>{elem.number}.</strong> {elem.step}</Typography>
-    ))
+  let newInstruction = [];
+  try {
+    if (analyzedInstructions) {
+      newInstruction = analyzedInstructions[0].steps.map(elem => (
+            <Typography key={elem.number} variant='h6' fontSize='18px'><strong>{elem.number}.</strong> {elem.step}</Typography>
+      ))
+    }
+  } catch (e) {
+    console.log(e);
   }
 
   return (
@@ -61,7 +65,7 @@ const Detail = ({ recipeDetail }) => {
             {newIngredients}
           </Box>
           <Box>
-            <Typography variant='h4' fontWeight={600}>Instructions</Typography>
+            {newInstruction.length > 0 && <Typography variant='h4' fontWeight={600}>Instructions</Typography>}
             {newInstruction}
           </Box>
         </Stack>
