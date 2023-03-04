@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.489f326f.css",
+    "main.js": "/static/js/main.33799fef.js",
+    "static/media/mix.jpg": "/static/media/mix.bbd1570aa78f2689ba4b.jpg",
+    "static/media/gluten-free.png": "/static/media/gluten-free.0d3596b381aa5f05e5f5.png",
+    "static/media/clock.png": "/static/media/clock.09c832895320976267bd.png",
+    "static/media/dairy-free.png": "/static/media/dairy-free.003cfbb165341e6e14a7.png",
+    "static/media/vegan.png": "/static/media/vegan.9dfcf75bf8f03070c29d.png",
+    "static/media/OhMyVeg2.png": "/static/media/OhMyVeg2.2fc212479289a76bd868.png",
+    "index.html": "/index.html",
+    "main.489f326f.css.map": "/static/css/main.489f326f.css.map",
+    "main.33799fef.js.map": "/static/js/main.33799fef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.489f326f.css",
+    "static/js/main.33799fef.js"
+  ]
+}
